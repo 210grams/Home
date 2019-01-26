@@ -152,7 +152,7 @@ AudioListener:
   m_Enabled: 1
 --- !u!114 &114188830436940856
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649394041220928}
