@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player_Interact : MonoBehaviour {
+public class Player_Interact : MonoBehaviour
+{
 
     public bool objectHeld;
     public GameObject heldObj;
     public string heldObjString;
     public GameObject objectHolder;
     public Transform objHolderTransform;
-    
+
     public GameObject targetSlot;
     public GameObject placeObject;
     public Transform targetSlotTransform;
-	// Use this for initialization
+    // Use this for initialization
 
-    void Start () {
-		
-	}
-    
+    void Start()
+    {
+
+    }
+
     // Update is called once per frame
-    void Update () {
-        
+    void Update()
+    {
+
         RaycastHit hit;
 
 
@@ -47,33 +50,27 @@ public class Player_Interact : MonoBehaviour {
                 }
             }
         }
-            if(objectHeld)
-            {
-                Debug.Log("2nd If");
-                
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 100) && hit.transform.tag == "TargetSlot")
-                {
-                    
-                    //Placement tooltip
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        targetSlot = hit.transform.gameObject;
-                        Destroy(heldObj);
+        if (objectHeld)
+        {
+            Debug.Log("2nd If");
 
-<<<<<<< HEAD
-                        targetSlotTransform = targetSlot.transform;
-                        placeObject = Instantiate(Resources.Load(heldObjString, typeof(GameObject)), targetSlotTransform) as GameObject;
-                        objectHeld = false;
-                    }
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 100) && hit.transform.tag == "TargetSlot")
+            {
+
+                //Placement tooltip
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    targetSlot = hit.transform.gameObject;
+                    Destroy(heldObj);
+
+                    targetSlotTransform = targetSlot.transform;
+                    placeObject = Instantiate(Resources.Load(heldObjString, typeof(GameObject)), targetSlotTransform) as GameObject;
+                    objectHeld = false;
                 }
             }
-
-            }
-       }
-	
-
-=======
         }
-	}
+
+
+    }
+
 }
->>>>>>> 3571ce2c74f2271ff9c1392c4228977a0beb2c14
