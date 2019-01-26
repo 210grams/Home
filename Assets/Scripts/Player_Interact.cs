@@ -16,6 +16,7 @@ public class Player_Interact : MonoBehaviour
     public GameObject placeObject;
     public Transform targetSlotTransform;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public GameObject itemSpawnPoint;
     public GameObject deactivatedItem;
@@ -28,6 +29,20 @@ public class Player_Interact : MonoBehaviour
     
 =======
     // Use this for initialization
+=======
+    // Use this for initialization
+
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        RaycastHit hit;
+>>>>>>> aac495053fe851faa18159801bdcff06a3701084
 
     void Start()
     {
@@ -66,6 +81,7 @@ public class Player_Interact : MonoBehaviour
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (objectHeld && Input.GetMouseButtonDown(1))
         {
 
@@ -102,18 +118,34 @@ public class Player_Interact : MonoBehaviour
                 //Placement tooltip
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+=======
+        if (objectHeld)
+        {
+            Debug.Log("2nd If");
+
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 100) && hit.transform.tag == "TargetSlot")
+            {
+
+                //Placement tooltip
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+>>>>>>> aac495053fe851faa18159801bdcff06a3701084
                     targetSlot = hit.transform.gameObject;
                     Destroy(heldObj);
 
                     targetSlotTransform = targetSlot.transform;
                     placeObject = Instantiate(Resources.Load(heldObjString, typeof(GameObject)), targetSlotTransform) as GameObject;
                     objectHeld = false;
+<<<<<<< HEAD
 >>>>>>> a020259400c8622301b7ed87e7f1f0c72420be7b
+=======
+>>>>>>> aac495053fe851faa18159801bdcff06a3701084
                 }
             }
         }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         
 =======
@@ -121,3 +153,8 @@ public class Player_Interact : MonoBehaviour
 
 }
 >>>>>>> a020259400c8622301b7ed87e7f1f0c72420be7b
+=======
+    }
+
+}
+>>>>>>> aac495053fe851faa18159801bdcff06a3701084
