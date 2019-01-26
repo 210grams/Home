@@ -60,6 +60,7 @@ public class Player_Interact : MonoBehaviour {
                         targetSlot = hit.transform.gameObject;
                         Destroy(heldObj);
 
+<<<<<<< HEAD
                         targetSlotTransform = targetSlot.transform;
                         placeObject = Instantiate(Resources.Load(heldObjString, typeof(GameObject)), targetSlotTransform) as GameObject;
                         objectHeld = false;
@@ -71,3 +72,8 @@ public class Player_Interact : MonoBehaviour {
        }
 	
 
+=======
+        }
+	}
+}
+>>>>>>> 3571ce2c74f2271ff9c1392c4228977a0beb2c14
